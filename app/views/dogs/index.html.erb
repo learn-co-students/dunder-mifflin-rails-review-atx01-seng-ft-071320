@@ -1,0 +1,7 @@
+<h1>I'm an index page</h1>
+<ul>
+<% sortdog= @dogs.sort_by {|dog| dog.employees.count}%>
+<% sortdog.each do |d| %>
+    <li><%= link_to d.name, dog_path(d) %> #dogs: <%= d.employees.count %></li>
+<% end %>
+</ul>
