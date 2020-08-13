@@ -1,0 +1,7 @@
+<h1>Dunder Mifflin Dogs!</h1>
+
+<ul>
+<% @dogs.each do |dog| %>
+<li><a href="<%= dog_path(dog)%>"><%= dog.name %></a></li>
+<%end%>
+</ul>
